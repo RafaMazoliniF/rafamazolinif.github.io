@@ -5,4 +5,4 @@
 
 ## Projects
 **Computer Vision Discipline Final Project**: SuperResLight
-- Explorated Data Analisys: (click here)[https://rafamazolinif.github.io/explorated_data_analisys.slides.html]
+- Explorated Data Analisys: [click here](https://rafamazolinif.github.io/explorated_data_analisys.slides.html)
