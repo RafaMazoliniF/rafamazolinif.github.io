@@ -7495,20 +7495,20 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Super-Resolution-e-Low-Light-Enhancement">Super Resolution e Low Light Enhancement<a class="anchor-link" href="#Super-Resolution-e-Low-Light-Enhancement">¶</a></h2><p>No paper (<strong>M. Rasheed, D. Shi,LSR</strong>: <em>Lightening super-resolution deep network for low-light image enhancement</em>), os autores citam 3 tipos métodos de melhoramento de imagens:</p>
+<h3 id="3-M%C3%A9todos-de-Melhoramento">3 Métodos de Melhoramento<a class="anchor-link" href="#3-M%C3%A9todos-de-Melhoramento">¶</a></h3><p><strong>Histograma</strong> → Rearranjam pixels uniformemente <br/>
+<strong>Teoria Retinex</strong> → Reflectância + Brilho <br/>
+<strong>Deep Learning</strong> → Redes Neurais Profundas</p>
+<h3 id="Deep-Learning:-Como-Funciona?">Deep Learning: Como Funciona?<a class="anchor-link" href="#Deep-Learning:-Como-Funciona?">¶</a></h3><p><strong>Treinamento</strong></p>
 <ul>
-<li>Baseados em <strong>Histograma</strong>, que rearranjam os pixels uniformemente;</li>
-<li>Baseados na <strong>Teoria Retinex</strong>, que utilizam conceitos de reflectância e brilho;</li>
-<li>Baseados em <strong>Deep Learning</strong>, que utilizam Redes Neurais Profundas;<ul>
-<li>A intuição é se treinar um modelo com imagens análogas, mas com qualidades diferentes, em que a imagem de <strong>maior qualidade</strong> é tratada como <strong>ground truth</strong>. Quanto mais o modelo se aproximar desse ground truth, mais ele performou.</li>
-<li>Alguns métodos podem ser usados para <strong>avaliação do modelo</strong>, e normalmente são classificados como avaliação por <strong>pixel</strong>, ou por <strong>percepção</strong>:<ul>
-<li><strong>Pixel</strong>: métodos computacionais comparativos pixel-a-pixel (MSE e PSNR)</li>
-<li><strong>Percepção</strong>: métodos extraídos de de percepção humana (LPIPS)</li>
+<li>Imagens com <strong>qualidades diferentes</strong></li>
+<li>Imagem de <strong>alta qualidade</strong> = ground truth</li>
+<li>Objetivo: aproximar do ground truth</li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
+<p><strong>Avaliação</strong> <br/>
+<strong>Por Pixel</strong>: MSE,PSNR <br/>
+<strong>Por Percepção</strong>: LPIPS (percepção humana)</p>
+<hr/>
+<p><strong>Referência:</strong> M. Rasheed, D. Shi - LSR: Lightening super-resolution deep network</p>
 </div>
 </div>
 </div>
@@ -7612,12 +7612,30 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Utiliza%C3%A7%C3%A3o-do-Dataset">Utilização do Dataset<a class="anchor-link" href="#Utiliza%C3%A7%C3%A3o-do-Dataset">¶</a></h3><p>O <strong>objetivo</strong> do dataset é suprir a falta de modelos de <strong>melhoramento completo</strong>, isto é, melhoramento de resolução e iluminação em um mesmo <strong>treinamento end-to-end</strong>. Para isso, os autores fizeram os <strong>dois tipos de manipulação em todas as imagens</strong>: o ground truth de iluminação pode ser uma imagem 1x, 2x, ou 4x. A <strong>combinação</strong> das duas modalidades gera um total de <strong>12750</strong> pares de imagens.</p>
-<p><strong>Pode ser usado tanto para Super Resolution isolado, Low Light Enhancement isolado, ou os dois de forma combinada.</strong></p>
-<p><strong>Licensa:</strong> Attribution 4.0 International (CC BY 4.0)</p>
+<h2 id="Utiliza%C3%A7%C3%A3o-do-Dataset">Utilização do Dataset<a class="anchor-link" href="#Utiliza%C3%A7%C3%A3o-do-Dataset">¶</a></h2><p><strong>Objetivo</strong>: <br/>
+Preencher lacuna de <strong>melhoramento completo</strong>: Resolução + Iluminação em <strong>treinamento end-to-end</strong></p>
+<h3 id="Estrutura-do-Dataset">Estrutura do Dataset<a class="anchor-link" href="#Estrutura-do-Dataset">¶</a></h3><p><strong>Manipulações aplicadas:</strong></p>
 <ul>
-<li>Pode fazer basicamente o que bem entender com o dataset, contanto que os créditos sejam dados aos autores e as mundanças feitas sejam indicadas claramente.</li>
+<li>Resolução: 1x, 2x, 4x</li>
+<li>Iluminação</li>
 </ul>
+<p><strong>Resultado:</strong> 12.750 pares de imagens</p>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ecf94724">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Aplica%C3%A7%C3%B5es">Aplicações<a class="anchor-link" href="#Aplica%C3%A7%C3%B5es">¶</a></h3><p><strong>3 modos de uso:</strong></p>
+<ol>
+<li>Super Resolution isolado</li>
+<li>Low Light Enhancement isolado</li>
+<li>Ambos combinados</li>
+</ol>
+<h3 id="Licen%C3%A7a">Licença<a class="anchor-link" href="#Licen%C3%A7a">¶</a></h3><p><strong>CC BY 4.0</strong> - Uso livre desde que creditados os autores e mudanças indicadas</p>
 </div>
 </div>
 </div>
@@ -7627,19 +7645,40 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Caracter%C3%ADsticas-dos-Dados">Características dos Dados<a class="anchor-link" href="#Caracter%C3%ADsticas-dos-Dados">¶</a></h3><p><strong>Iluminação</strong>: Todas são de tamanho 625x625 pixels (1x)</p>
-<ul>
-<li><strong>Problema</strong>: as imagens mais escuras ficaram escuras demais até mesmo para discernir se a fotografia saiu correta e sem agentes inesperados (como um pássaro voando).</li>
+<h2 id="Caracter%C3%ADsticas-dos-Dados">Características dos Dados<a class="anchor-link" href="#Caracter%C3%ADsticas-dos-Dados">¶</a></h2><h3 id="Ilumina%C3%A7%C3%A3o">Iluminação<a class="anchor-link" href="#Ilumina%C3%A7%C3%A3o">¶</a></h3><p>Todas as imagens: <strong>625x625 pixels</strong> (1x) <br/>
+<strong>Problema:</strong> Imagens escuras demais podem dificultar validação visual (ex: pássaros, artefatos)</p>
+<h3 id="Resolu%C3%A7%C3%A3o">Resolução<a class="anchor-link" href="#Resolu%C3%A7%C3%A3o">¶</a></h3><ul>
+<li><strong>1x</strong> = 625 x 625</li>
+<li><strong>2x</strong> = 1250 x 1250</li>
+<li><strong>4x</strong> = 2500 x 2500</li>
 </ul>
-<p><strong>Resolução</strong>:</p>
+<p><strong>Problemas:</strong></p>
 <ul>
-<li><strong>1x</strong> = 625 x 625;</li>
-<li><strong>2x</strong> = 1250 x 1250;</li>
-<li><strong>4x</strong> = 2500 x 2500;</li>
+<li>Capturas rápidas podem ter pequenas diferenças entre frames</li>
+<li>Recortes podem ser irregulares (apesar de SURF features + MSAC)</li>
 </ul>
-<p><strong>Problema</strong>: as imagens são tiradas em sequências muito rápidas, mas podem capturar alguma diferença pequena (os autores fizeram um esforço para evitar isso). Além disso, o recorte feito para cada uma das imagens pode ser um pouco irregular em relação às outras fotos relacionadas, mesmo utilizando técnicas avançadas (detectar SURF features, e MSAC) para evitar esse problema</p>
-<p><strong>Contexto</strong>: Segundo os autores, a distribuição de imagens em ambiente <strong>externo</strong> e <strong>interno</strong> é de aproximadamente <strong>51%</strong> e <strong>49%</strong> respectivamente. Ótimo para <strong>evitar</strong> um <strong>modelo enviesado</strong>.</p>
-<p><strong>OBS</strong>: O dataset não possui imagem que possam identificar alguém: evitaram pessoas, rostos, placas de carro, e qualquer conteúdo que possa ser considerado ofensivo. Assim, pode ser que o modelo performe pior em imagens que possuam essas características.</p>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=68872f50">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Contexto-das-Imagens">Contexto das Imagens<a class="anchor-link" href="#Contexto-das-Imagens">¶</a></h3><p><strong>Distribuição balanceada:</strong></p>
+<ul>
+<li>Ambiente externo: ~51%</li>
+<li>Ambiente interno: ~49%</li>
+</ul>
+<p><strong>→ Evita modelo enviesado</strong></p>
+<h3 id="Privacidade">Privacidade<a class="anchor-link" href="#Privacidade">¶</a></h3><p><strong>Dataset sem informações identificáveis:</strong></p>
+<ul>
+<li>Sem pessoas/rostos</li>
+<li>Sem placas de carro</li>
+<li>Sem conteúdo ofensivo</li>
+</ul>
+<p><strong>Limitação:</strong> Modelo pode performar pior em imagens com essas características/</p>
 </div>
 </div>
 </div>
@@ -7649,18 +7688,40 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Planejamento-Inicial">Planejamento Inicial<a class="anchor-link" href="#Planejamento-Inicial">¶</a></h2><p>O dataset possui imagens tanto sobre Super Resolution quanto Low Light Enhancement.</p>
-<h3 id="Pr%C3%A9-Processamento">Pré-Processamento<a class="anchor-link" href="#Pr%C3%A9-Processamento">¶</a></h3><ol>
-<li>Aplicar rotação e translação de imagens (lembrar de aplicar a mesma trasnformação às imagens ground-truth);</li>
-<li>Não existe desbalanceamento interno e outros problemas comuns no dataset, principalmente pela natureza do problema;</li>
-</ol>
-<h3 id="Experimentos-Iniciais">Experimentos Iniciais<a class="anchor-link" href="#Experimentos-Iniciais">¶</a></h3><p>Ainda preciso <strong>estudar</strong> sobre <strong>melhoramento e geração de imagem</strong>. Por isso, planejo <strong>começar</strong> pelo mais <strong>simples</strong>:</p>
+<h2 id="Planejamento-Inicial">Planejamento Inicial<a class="anchor-link" href="#Planejamento-Inicial">¶</a></h2><h3 id="Pr%C3%A9-Processamento">Pré-Processamento<a class="anchor-link" href="#Pr%C3%A9-Processamento">¶</a></h3><p><strong>Data Augmentation:</strong></p>
 <ul>
-<li><strong>Arquitetura</strong>: Redes Neurais Convolucionais comuns, utilizando ADAM;</li>
-<li><strong>Loss functions</strong>: MSE ou PSNR.</li>
-<li><strong>Separar o problema</strong>: treinar um modelo somente de Super Resolution, ou somente de Low Light Enhancement;</li>
-<li>Os resultados provavelmente não serão tão bons, mas basta haver algum resultado para validar o método de treinamento;</li>
+<li>Rotação e translação de imagens</li>
+<li>Aplicar mesmas transformações às imagens ground-truth</li>
 </ul>
+<p><strong>Vantagem do dataset:</strong> Não possui desbalanceamento ou problemas comuns pela natureza do problema</p>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=07ec9129">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Experimentos-Iniciais">Experimentos Iniciais<a class="anchor-link" href="#Experimentos-Iniciais">¶</a></h3><p><strong>Objetivo:</strong> Começar pelo mais simples para validar método de treinamento</p>
+<p><strong>Arquitetura:</strong></p>
+<ul>
+<li>CNNs convencionais</li>
+<li>Otimizador: ADAM</li>
+</ul>
+<p><strong>Loss Functions:</strong></p>
+<ul>
+<li>MSE ou PSNR</li>
+</ul>
+<p><strong>Estratégia:</strong></p>
+<ul>
+<li>Separar problemas: treinar modelos isolados<ul>
+<li>Super Resolution apenas</li>
+<li>Low Light Enhancement apenas</li>
+</ul>
+</li>
+</ul>
+<p><strong>Expectativa:</strong> Resultados modestos, mas suficientes para validação do método</p>
 </div>
 </div>
 </div>
